@@ -24,5 +24,6 @@ func home_page(_request: HttpRequest, response: HttpResponse) -> bool:
 	response.send(200,'<h1>Hello, world!</p>')
 	return true
 
-func recieve_fish(request: HttpRequest, response: HttpResponse) -> bool:
+func recieve_fish(request: HttpRequest, _response: HttpResponse) -> bool:
+	print(request.body)
 	return true

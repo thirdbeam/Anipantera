@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://cbcf4ifnugqb1"]
-
-[node name="Node2D" type="Node2D" unique_id=1021542526]
-
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=611023405]
-offset_right = 1154.0
-offset_bottom = 650.0

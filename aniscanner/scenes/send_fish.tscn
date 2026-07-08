@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://boo372cm0qfi4"]
+
+[ext_resource type="Script" uid="uid://36j5so3jdpgv" path="res://scenes/send_fish.gd" id="1_btvjm"]
+
+[node name="SendFish" type="HTTPRequest" unique_id=1677014109]
+accept_gzip = false
+script = ExtResource("1_btvjm")

@@ -1,3 +1,0 @@
-[gd_scene format=3 uid="uid://boo372cm0qfi4"]
-
-[node name="SendFish" type="HTTPRequest" unique_id=1677014109]

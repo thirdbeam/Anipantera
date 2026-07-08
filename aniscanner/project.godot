@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="aniscanner"
-run/main_scene="uid://cywsi5842vw8"
+run/main_scene="uid://b8j2fj04a6y1y"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,10 @@ SendFish="*uid://boo372cm0qfi4"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/NativeCameraPlugin/plugin.cfg", "res://addons/QRPlugin/plugin.cfg")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
@@ -33,3 +37,4 @@ window/stretch/aspect="expand"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

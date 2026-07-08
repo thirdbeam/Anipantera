@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b8j2fj04a6y1y"]
+
+[ext_resource type="Texture2D" uid="uid://bxh1eemqq21xx" path="res://textures/2891ccf3c9339225c036a2c192e86014.jpg" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://bblrda468pnlo" path="res://scenes/button.gd" id="2_ekxnf"]
+
+[node name="main_menu" type="Control" unique_id=528504643]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=1249021505]
+modulate = Color(0.28, 0.28, 0.28, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_l6cm7")
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1632900132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=833420458]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="CenterContainer/VBoxContainer" unique_id=286327617]
+custom_minimum_size = Vector2(512, 32)
+layout_mode = 2
+placeholder_text = "Введите IP подключения"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1576304312]
+layout_mode = 2
+text = "Подтвердить"
+script = ExtResource("2_ekxnf")

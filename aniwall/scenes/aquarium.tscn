@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b7888j41v1eif" path="res://1dd1b550606149a99322cef665303cce-1172658009.jpg" id="3_d0q3v"]
 [ext_resource type="PackedScene" uid="uid://db4xca2raicg6" path="res://scenes/fish2.tscn" id="4_pxnnk"]
 [ext_resource type="PackedScene" uid="uid://b8rfmcf6i5d1x" path="res://scenes/fish4.tscn" id="5_5dg5m"]
+[ext_resource type="PackedScene" uid="uid://juxtgks6qdm" path="res://scenes/fish3.tscn" id="6_71x8f"]
+[ext_resource type="PackedScene" uid="uid://dt606ntl1hkxr" path="res://scenes/fish1.tscn" id="7_odjgq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch40n"]
 albedo_texture = ExtResource("2_u42aw")
@@ -78,3 +80,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9159975, 0, -3.934454)
 
 [node name="riba4_animated" parent="." unique_id=1840357363 instance=ExtResource("5_5dg5m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4627819, 1.4510164, 4.616063)
+
+[node name="riba3_animated" parent="." unique_id=587373784 instance=ExtResource("6_71x8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5908251, 1.4274032, -1.7004831)
+
+[node name="riba1_animated" parent="." unique_id=2059342077 instance=ExtResource("7_odjgq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4783626, 0, 3.8932338)

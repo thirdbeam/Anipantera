@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0aeryixojqia"
-path.s3tc="res://.godot/imported/riba2_animated_tOocgAWSsUBVpxE7byisn1w4wUQwiG4X6R6h5HMooMft_8lM03X0-8OovyhfOxXlgWezQfs7sjGN9A4Q0Q550RSs.jpg-34b7368b9be2eb304c7efb35d0d62cef.s3tc.ctex"
+uid="uid://c2oadjrgpw3oq"
+path.s3tc="res://.godot/imported/riba3_animated_4J97rZ33W90BcJl2Ueu4e3a_p_tvXGnvcwNyT_ZrHEwAGnH8SaIwSmKmlAhyh-ZHt78b-o8gnBFZC5vRCo1X5Qjd.jpg-11f54a745f8e22dfefc5c961769e5da8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "affb7930de39b07800261677ab5247a0"
+"md5": "bfd35cadba128baf0a2078aa38fb5458"
 }
 
 [deps]
 
-source_file="res://models/riba2_animated_tOocgAWSsUBVpxE7byisn1w4wUQwiG4X6R6h5HMooMft_8lM03X0-8OovyhfOxXlgWezQfs7sjGN9A4Q0Q550RSs.jpg"
-dest_files=["res://.godot/imported/riba2_animated_tOocgAWSsUBVpxE7byisn1w4wUQwiG4X6R6h5HMooMft_8lM03X0-8OovyhfOxXlgWezQfs7sjGN9A4Q0Q550RSs.jpg-34b7368b9be2eb304c7efb35d0d62cef.s3tc.ctex"]
+source_file="res://models/riba3_animated_4J97rZ33W90BcJl2Ueu4e3a_p_tvXGnvcwNyT_ZrHEwAGnH8SaIwSmKmlAhyh-ZHt78b-o8gnBFZC5vRCo1X5Qjd.jpg"
+dest_files=["res://.godot/imported/riba3_animated_4J97rZ33W90BcJl2Ueu4e3a_p_tvXGnvcwNyT_ZrHEwAGnH8SaIwSmKmlAhyh-ZHt78b-o8gnBFZC5vRCo1X5Qjd.jpg-11f54a745f8e22dfefc5c961769e5da8.s3tc.ctex"]
 
 [params]
 

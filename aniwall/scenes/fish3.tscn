@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://juxtgks6qdm"]
+
+[ext_resource type="PackedScene" uid="uid://babpmg7djao43" path="res://models/riba3_animated.glb" id="1_duk8p"]
+[ext_resource type="Script" uid="uid://n4wwtp5r1l4d" path="res://system/fish_ai.gd" id="2_klbbs"]
+
+[node name="riba3_animated" unique_id=587373784 node_paths=PackedStringArray("animator") instance=ExtResource("1_duk8p")]
+script = ExtResource("2_klbbs")
+animator = NodePath("AnimationPlayer")
+
+[node name="Skeleton3D" parent="Арматура" parent_id_path=PackedInt32Array(1547944929) index="0" unique_id=448083115]
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/1/rotation = Quaternion(-0.35215282, -1.1157303e-07, 4.197988e-08, 0.9359426)
+bones/2/rotation = Quaternion(-7.3103806e-08, 0.249832, 0.96828926, -1.8861794e-08)
+bones/3/rotation = Quaternion(0.0033542924, -1.3318167e-14, 5.0648175e-10, 0.9999944)
+bones/4/rotation = Quaternion(0.9122521, 3.6086746e-15, 1.3774631e-07, 0.40962914)
+bones/5/rotation = Quaternion(0.88091063, 2.2654133e-14, 1.3301383e-07, -0.47328258)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=482353022]
+autoplay = &"АрматураДействие"

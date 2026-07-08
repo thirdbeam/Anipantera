@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dt606ntl1hkxr"]
+
+[ext_resource type="PackedScene" uid="uid://b3ce5js13qk36" path="res://models/riba1_animated.glb" id="1_4hgr3"]
+[ext_resource type="Script" uid="uid://n4wwtp5r1l4d" path="res://system/fish_ai.gd" id="2_ngq1a"]
+
+[node name="riba1_animated" unique_id=2059342077 node_paths=PackedStringArray("animator") instance=ExtResource("1_4hgr3")]
+script = ExtResource("2_ngq1a")
+animator = NodePath("AnimationPlayer")
+
+[node name="Skeleton3D" parent="Арматура" parent_id_path=PackedInt32Array(404640912) index="0" unique_id=487009211]
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/1/rotation = Quaternion(-0.45374545, 0.0076797456, 0.0039105266, 0.8910898)
+bones/2/rotation = Quaternion(0.01932715, 0.3072804, 0.95140225, -0.0062422385)
+bones/3/rotation = Quaternion(0.0008952983, -1.11141055e-07, -5.4324057e-05, 0.99999964)
+bones/4/rotation = Quaternion(0.0061753257, 1.0089712e-08, -0.0003746814, 0.99998087)
+bones/5/rotation = Quaternion(0.87881535, -6.222948e-09, -0.053321265, 0.47417346)
+bones/6/rotation = Quaternion(0.8707131, -1.6138907e-08, -0.052829612, -0.4889457)
+bones/7/rotation = Quaternion(-0.8133361, 2.030068e-08, 0.049348157, 0.5796975)
+bones/8/rotation = Quaternion(0.839887, -4.7403955e-08, -0.0509592, 0.5403637)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1549293924]
+autoplay = &"АрматураДействие"

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0aeryixojqia"
-path.s3tc="res://.godot/imported/riba2_animated_tOocgAWSsUBVpxE7byisn1w4wUQwiG4X6R6h5HMooMft_8lM03X0-8OovyhfOxXlgWezQfs7sjGN9A4Q0Q550RSs.jpg-34b7368b9be2eb304c7efb35d0d62cef.s3tc.ctex"
+uid="uid://cyuupjs337eml"
+path.s3tc="res://.godot/imported/riba1_animated_Rybachyort3.png-035f0cb32e3a34f5b78b4805d346e446.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "affb7930de39b07800261677ab5247a0"
+"md5": "4cfbd0223983180ab956f1089fe3d958"
 }
 
 [deps]
 
-source_file="res://models/riba2_animated_tOocgAWSsUBVpxE7byisn1w4wUQwiG4X6R6h5HMooMft_8lM03X0-8OovyhfOxXlgWezQfs7sjGN9A4Q0Q550RSs.jpg"
-dest_files=["res://.godot/imported/riba2_animated_tOocgAWSsUBVpxE7byisn1w4wUQwiG4X6R6h5HMooMft_8lM03X0-8OovyhfOxXlgWezQfs7sjGN9A4Q0Q550RSs.jpg-34b7368b9be2eb304c7efb35d0d62cef.s3tc.ctex"]
+source_file="res://models/riba1_animated_Rybachyort3.png"
+dest_files=["res://.godot/imported/riba1_animated_Rybachyort3.png-035f0cb32e3a34f5b78b4805d346e446.s3tc.ctex"]
 
 [params]
 

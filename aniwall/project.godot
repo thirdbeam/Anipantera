@@ -11,13 +11,22 @@ config_version=5
 [application]
 
 config/name="aniwall"
+run/main_scene="uid://dwl65snm6egg4"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+FishServer="*uid://xv2qg3ml5bok"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/QRPlugin/plugin.cfg", "res://addons/godottpd/plugin.cfg", "res://addons/kenyoni/qr_code/plugin.cfg")
 
 [physics]
 

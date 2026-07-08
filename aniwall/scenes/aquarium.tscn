@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dwl65snm6egg4"]
+
+[ext_resource type="Script" uid="uid://c8kjn1s88t3qm" path="res://system/qr_code.gd" id="1_ch40n"]
+
+[node name="Aquarium" type="Node3D" unique_id=503809357]
+
+[node name="Control" type="Control" parent="." unique_id=866904067]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1637759397]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.10284029
+anchor_bottom = 0.18160498
+offset_right = -0.47201538
+offset_bottom = 0.3199768
+expand_mode = 1
+script = ExtResource("1_ch40n")
+auto_update = true
+mode = 2
+error_correction = 2
+use_eci = false
+data = ""
+auto_version = true
+auto_mask_pattern = true
+light_module_color = Color(1, 1, 1, 1)
+dark_module_color = Color(0, 0, 0, 1)
+auto_module_size = true
+quiet_zone_size = 2
+metadata/_custom_type_script = "uid://dynulhnyq5hpq"
+metadata/_edit_use_anchors_ = true

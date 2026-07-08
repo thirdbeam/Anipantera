@@ -26,7 +26,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/QRPlugin/plugin.cfg", "res://addons/godottpd/plugin.cfg", "res://addons/kenyoni/qr_code/plugin.cfg")
+enabled=PackedStringArray("res://addons/godottpd/plugin.cfg", "res://addons/kenyoni/qr_code/plugin.cfg")
 
 [physics]
 

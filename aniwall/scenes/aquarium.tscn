@@ -1,10 +1,38 @@
 [gd_scene format=3 uid="uid://dwl65snm6egg4"]
 
 [ext_resource type="Script" uid="uid://c8kjn1s88t3qm" path="res://system/qr_code.gd" id="1_ch40n"]
+[ext_resource type="Texture2D" uid="uid://c4nkeexedjjss" path="res://beach-sand-close-up-photo-386746481.jpg" id="2_u42aw"]
+[ext_resource type="Texture2D" uid="uid://b7888j41v1eif" path="res://1dd1b550606149a99322cef665303cce-1172658009.jpg" id="3_d0q3v"]
+[ext_resource type="PackedScene" uid="uid://db4xca2raicg6" path="res://scenes/fish2.tscn" id="4_pxnnk"]
+[ext_resource type="PackedScene" uid="uid://b8rfmcf6i5d1x" path="res://scenes/fish4.tscn" id="5_5dg5m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch40n"]
+albedo_texture = ExtResource("2_u42aw")
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u7u8q"]
+material = SubResource("StandardMaterial3D_ch40n")
+size = Vector2(8, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ffceb"]
+shading_mode = 0
+albedo_texture = ExtResource("3_d0q3v")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pxnnk"]
+material = SubResource("StandardMaterial3D_ffceb")
+size = Vector2(8, 20)
 
 [node name="Aquarium" type="Node3D" unique_id=503809357]
 
-[node name="Control" type="Control" parent="." unique_id=866904067]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1489282936]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1309033904]
+transform = Transform3D(0.16137192, -0.018818453, -0.9867143, -0.7933098, -0.5972038, -0.11835187, -0.58704233, 0.80186874, -0.11130077, 0, 0, 0)
+shadow_enabled = true
+
+[node name="GUI" type="Control" parent="." unique_id=866904067]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +40,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1637759397]
+[node name="TextureRect" type="TextureRect" parent="GUI" unique_id=1637759397]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.10284029
@@ -25,12 +53,28 @@ auto_update = true
 mode = 2
 error_correction = 2
 use_eci = false
-data = ""
+data = "172.18.0.1"
 auto_version = true
 auto_mask_pattern = true
 light_module_color = Color(1, 1, 1, 1)
 dark_module_color = Color(0, 0, 0, 1)
 auto_module_size = true
-quiet_zone_size = 2
+quiet_zone_size = 1
 metadata/_custom_type_script = "uid://dynulhnyq5hpq"
 metadata/_edit_use_anchors_ = true
+
+[node name="Shore" type="MeshInstance3D" parent="." unique_id=1440430749]
+mesh = SubResource("PlaneMesh_u7u8q")
+
+[node name="Wate" type="MeshInstance3D" parent="." unique_id=67904019]
+transform = Transform3D(2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, 0, 0, 1, 2, 3.1617675, 0)
+mesh = SubResource("PlaneMesh_pxnnk")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1937570661]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.0496616, 2.1270473, 0)
+
+[node name="riba2_animated" parent="." unique_id=19082022 instance=ExtResource("4_pxnnk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9159975, 0, -3.934454)
+
+[node name="riba4_animated" parent="." unique_id=1840357363 instance=ExtResource("5_5dg5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4627819, 1.4510164, 4.616063)

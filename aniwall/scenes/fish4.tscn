@@ -2,15 +2,24 @@
 
 [ext_resource type="PackedScene" uid="uid://bq4cfa32tr21m" path="res://models/riba4_animated.glb" id="1_be8xb"]
 [ext_resource type="Script" uid="uid://n4wwtp5r1l4d" path="res://system/fish_ai.gd" id="2_8leqc"]
+[ext_resource type="AudioStream" uid="uid://tf7nt3ibjq1n" path="res://sound design/water_splash.tres" id="3_abwtu"]
 
-[node name="riba4_animated" unique_id=1840357363 node_paths=PackedStringArray("animator") instance=ExtResource("1_be8xb")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8leqc"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+
+[node name="riba4_animated" unique_id=1840357363 node_paths=PackedStringArray("animator", "mesh", "audio") instance=ExtResource("1_be8xb")]
 script = ExtResource("2_8leqc")
 animator = NodePath("AnimationPlayer")
+mesh = NodePath("Арматура/Skeleton3D/Окружность")
+audio = NodePath("AudioStreamPlayer")
 
-[node name="Арматура" parent="." index="0" unique_id=1726656059]
+[node name="Арматура" parent="." index="1" unique_id=379304376]
 transform = Transform3D(0.5857031, 0.012011143, -0.014270943, 0.004545121, 0.34292415, 0.47516146, 0.018090583, -0.47503138, 0.34265718, 0.008344114, 0.01403251, -1.1227491)
 
-[node name="Skeleton3D" parent="Арматура" index="0" unique_id=506405861]
+[node name="Skeleton3D" parent="Арматура" index="0" unique_id=1052959454]
 bones/0/rotation = Quaternion(0, 0, 0, 1)
 bones/1/rotation = Quaternion(-0.51394916, -0.00043598135, -0.00026117032, 0.8578205)
 bones/2/rotation = Quaternion(0.010187333, 0.30038688, 0.95375764, -0.0032085816)
@@ -20,5 +29,11 @@ bones/5/rotation = Quaternion(0.9641871, -3.2481008e-08, -0.042077996, 0.2618638
 bones/6/rotation = Quaternion(0.9570527, -1.598791e-08, -0.04176645, -0.28689003)
 bones/7/rotation = Quaternion(-0.6943987, -9.1468264e-11, 0.030304095, 0.7189521)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=591125207]
+[node name="Окружность" parent="Арматура/Skeleton3D" index="0" unique_id=1625451740]
+material_override = SubResource("StandardMaterial3D_8leqc")
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=401893395]
 autoplay = &"АрматураДействие"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3" unique_id=1337455512]
+stream = ExtResource("3_abwtu")

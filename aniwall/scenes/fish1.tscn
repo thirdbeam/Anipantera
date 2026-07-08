@@ -2,12 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://b3ce5js13qk36" path="res://models/riba1_animated.glb" id="1_4hgr3"]
 [ext_resource type="Script" uid="uid://n4wwtp5r1l4d" path="res://system/fish_ai.gd" id="2_ngq1a"]
+[ext_resource type="AudioStream" uid="uid://tf7nt3ibjq1n" path="res://sound design/water_splash.tres" id="3_ngq1a"]
 
-[node name="riba1_animated" unique_id=2059342077 node_paths=PackedStringArray("animator") instance=ExtResource("1_4hgr3")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hgr3"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+
+[node name="riba1_animated" unique_id=2059342077 node_paths=PackedStringArray("animator", "mesh", "audio") instance=ExtResource("1_4hgr3")]
 script = ExtResource("2_ngq1a")
 animator = NodePath("AnimationPlayer")
+mesh = NodePath("Арматура/Skeleton3D/Плоскость")
+audio = NodePath("AudioStreamPlayer")
 
-[node name="Skeleton3D" parent="Арматура" parent_id_path=PackedInt32Array(404640912) index="0" unique_id=487009211]
+[node name="Skeleton3D" parent="Арматура" parent_id_path=PackedInt32Array(430965640) index="0" unique_id=371496433]
 bones/0/rotation = Quaternion(0, 0, 0, 1)
 bones/1/rotation = Quaternion(-0.45374545, 0.0076797456, 0.0039105266, 0.8910898)
 bones/2/rotation = Quaternion(0.01932715, 0.3072804, 0.95140225, -0.0062422385)
@@ -18,5 +27,11 @@ bones/6/rotation = Quaternion(0.8707131, -1.6138907e-08, -0.052829612, -0.488945
 bones/7/rotation = Quaternion(-0.8133361, 2.030068e-08, 0.049348157, 0.5796975)
 bones/8/rotation = Quaternion(0.839887, -4.7403955e-08, -0.0509592, 0.5403637)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1549293924]
+[node name="Плоскость" parent="Арматура/Skeleton3D" index="0" unique_id=697697119]
+material_override = SubResource("StandardMaterial3D_4hgr3")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=971987726]
 autoplay = &"АрматураДействие"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2" unique_id=1081159383]
+stream = ExtResource("3_ngq1a")

@@ -2,15 +2,24 @@
 
 [ext_resource type="PackedScene" uid="uid://3rsesgx0eo7e" path="res://models/riba2_animated.glb" id="1_pmn2l"]
 [ext_resource type="Script" uid="uid://n4wwtp5r1l4d" path="res://system/fish_ai.gd" id="2_gwup6"]
+[ext_resource type="AudioStream" uid="uid://tf7nt3ibjq1n" path="res://sound design/water_splash.tres" id="3_o5pd5"]
 
-[node name="riba2_animated" unique_id=19082022 node_paths=PackedStringArray("animator") instance=ExtResource("1_pmn2l")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwup6"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+
+[node name="riba2_animated" unique_id=19082022 node_paths=PackedStringArray("animator", "mesh", "audio") instance=ExtResource("1_pmn2l")]
 script = ExtResource("2_gwup6")
 animator = NodePath("AnimationPlayer")
+mesh = NodePath("Арматура/Skeleton3D/Окружность")
+audio = NodePath("AudioStreamPlayer")
 
-[node name="Арматура" parent="." index="0" unique_id=1032516165]
+[node name="Арматура" parent="." index="0" unique_id=622147661]
 transform = Transform3D(0.397, 0, 0, 0, 0.025298595, -0.39619312, 0, 0.39619312, 0.025298595, 0, 1.2970678, -2.0466433)
 
-[node name="Skeleton3D" parent="Арматура" index="0" unique_id=936974987]
+[node name="Skeleton3D" parent="Арматура" index="0" unique_id=826704700]
 bones/3/rotation = Quaternion(-0.01334026, -2.014964e-19, -2.9679824e-18, 0.999911)
 bones/4/rotation = Quaternion(-0.023296244, -3.38363e-19, -5.1705823e-18, 0.9997286)
 bones/5/rotation = Quaternion(0.88671607, 4.1688277e-18, 1.8814693e-16, -0.4623144)
@@ -20,5 +29,11 @@ bones/8/rotation = Quaternion(0.8249054, 0.15903796, -0.10268841, 0.53262854)
 bones/9/rotation = Quaternion(0.8249054, -0.15903796, 0.10268841, 0.53262854)
 bones/10/rotation = Quaternion(0.959188, -3.3708726e-08, 1.1434415e-07, -0.28276923)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1688779496]
+[node name="Окружность" parent="Арматура/Skeleton3D" index="0" unique_id=944353287]
+material_override = SubResource("StandardMaterial3D_gwup6")
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=658445492]
 autoplay = &"swim"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3" unique_id=1293476813]
+stream = ExtResource("3_o5pd5")

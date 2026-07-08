@@ -1,0 +1,27 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://tf7nt3ibjq1n"]
+
+[ext_resource type="AudioStream" uid="uid://btv0775mytwrh" path="res://sound design/water_sound_1.mp3" id="1_4ix6g"]
+[ext_resource type="AudioStream" uid="uid://dohlcgjrhxjlb" path="res://sound design/water_sound_2.mp3" id="2_1ebgw"]
+[ext_resource type="AudioStream" uid="uid://x41hpw8bn7ul" path="res://sound design/water_sound_mix_4.mp3" id="3_hodla"]
+[ext_resource type="AudioStream" uid="uid://hoeojitd51f8" path="res://sound design/water_sound_3.mp3" id="4_t1nqk"]
+[ext_resource type="AudioStream" uid="uid://b84qq26tm1q18" path="res://sound design/water_sound_4.mp3" id="5_mqpth"]
+[ext_resource type="AudioStream" uid="uid://cduce1la63upf" path="res://sound design/water_sound_5.mp3" id="6_1yie5"]
+[ext_resource type="AudioStream" uid="uid://cjwwl2p7njmgs" path="res://sound design/water_sound_6.mp3" id="7_t74wl"]
+[ext_resource type="AudioStream" uid="uid://cjvytgcpnlogv" path="res://sound design/water_sound_7.mp3" id="8_2uin2"]
+[ext_resource type="AudioStream" uid="uid://5nprlq7ukbk0" path="res://sound design/water_sound_mix_1.mp3" id="9_cmw88"]
+[ext_resource type="AudioStream" uid="uid://bq7r33rl0ej8x" path="res://sound design/water_sound_mix_2.mp3" id="10_q4tdq"]
+[ext_resource type="AudioStream" uid="uid://dtgv7aucy5m5" path="res://sound design/water_sound_mix_3.mp3" id="11_bi4es"]
+
+[resource]
+streams_count = 11
+stream_0/stream = ExtResource("1_4ix6g")
+stream_1/stream = ExtResource("2_1ebgw")
+stream_2/stream = ExtResource("4_t1nqk")
+stream_3/stream = ExtResource("5_mqpth")
+stream_4/stream = ExtResource("6_1yie5")
+stream_5/stream = ExtResource("7_t74wl")
+stream_6/stream = ExtResource("8_2uin2")
+stream_7/stream = ExtResource("9_cmw88")
+stream_8/stream = ExtResource("10_q4tdq")
+stream_9/stream = ExtResource("11_bi4es")
+stream_10/stream = ExtResource("3_hodla")

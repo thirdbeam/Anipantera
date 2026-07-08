@@ -1,9 +1,13 @@
 extends Node3D
 
+class_name Fish
+
 var rng: RandomNumberGenerator
 
 @onready var destination: Vector3 = global_position
 @export var animator: AnimationPlayer
+@export var mesh: MeshInstance3D
+@export var audio: AudioStreamPlayer
 var timer: Timer
 
 func _ready() -> void:
@@ -35,3 +39,4 @@ func _process(delta: float) -> void:
 func update_destination() -> void:
 	destination = Vector3(rng.randf_range(-1,1),rng.randf_range(0.5,3),rng.randf_range(-4,4))
 	timer.start(rng.randf_range(3,5))
+	audio.play()

@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://dwl65snm6egg4"]
 
 [ext_resource type="Script" uid="uid://c8kjn1s88t3qm" path="res://system/qr_code.gd" id="1_ch40n"]
+[ext_resource type="Script" uid="uid://c6c3jwftngm53" path="res://scenes/fish_spawner.gd" id="1_ffceb"]
 [ext_resource type="Texture2D" uid="uid://c4nkeexedjjss" path="res://beach-sand-close-up-photo-386746481.jpg" id="2_u42aw"]
 [ext_resource type="Texture2D" uid="uid://b7888j41v1eif" path="res://1dd1b550606149a99322cef665303cce-1172658009.jpg" id="3_d0q3v"]
 [ext_resource type="PackedScene" uid="uid://db4xca2raicg6" path="res://scenes/fish2.tscn" id="4_pxnnk"]
 [ext_resource type="PackedScene" uid="uid://b8rfmcf6i5d1x" path="res://scenes/fish4.tscn" id="5_5dg5m"]
 [ext_resource type="PackedScene" uid="uid://juxtgks6qdm" path="res://scenes/fish3.tscn" id="6_71x8f"]
 [ext_resource type="PackedScene" uid="uid://dt606ntl1hkxr" path="res://scenes/fish1.tscn" id="7_odjgq"]
+[ext_resource type="AudioStream" uid="uid://bhlxx4cmgithy" path="res://sound design/ambience.tres" id="9_6g8si"]
+[ext_resource type="AudioStream" uid="uid://tf7nt3ibjq1n" path="res://sound design/water_splash.tres" id="9_g8q5e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch40n"]
 albedo_texture = ExtResource("2_u42aw")
@@ -25,6 +28,8 @@ material = SubResource("StandardMaterial3D_ffceb")
 size = Vector2(8, 20)
 
 [node name="Aquarium" type="Node3D" unique_id=503809357]
+script = ExtResource("1_ffceb")
+fishes = Array[PackedScene]([ExtResource("7_odjgq"), ExtResource("4_pxnnk"), ExtResource("6_71x8f"), ExtResource("5_5dg5m")])
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1489282936]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -55,7 +60,7 @@ auto_update = true
 mode = 2
 error_correction = 2
 use_eci = false
-data = "172.18.0.1"
+data = "10.34.152.56"
 auto_version = true
 auto_mask_pattern = true
 light_module_color = Color(1, 1, 1, 1)
@@ -75,14 +80,11 @@ mesh = SubResource("PlaneMesh_pxnnk")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1937570661]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.0496616, 2.1270473, 0)
 
-[node name="riba2_animated" parent="." unique_id=19082022 instance=ExtResource("4_pxnnk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9159975, 0, -3.934454)
+[node name="splash" type="AudioStreamPlayer" parent="." unique_id=1907876662]
+stream = ExtResource("9_g8q5e")
+max_polyphony = 4
 
-[node name="riba4_animated" parent="." unique_id=1840357363 instance=ExtResource("5_5dg5m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4627819, 1.4510164, 4.616063)
-
-[node name="riba3_animated" parent="." unique_id=587373784 instance=ExtResource("6_71x8f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5908251, 1.4274032, -1.7004831)
-
-[node name="riba1_animated" parent="." unique_id=2059342077 instance=ExtResource("7_odjgq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4783626, 0, 3.8932338)
+[node name="ambience" type="AudioStreamPlayer" parent="." unique_id=689579021]
+stream = ExtResource("9_6g8si")
+volume_db = -25.0
+autoplay = true

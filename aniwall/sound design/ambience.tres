@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamPlaylist" format=3 uid="uid://bhlxx4cmgithy"]
+
+[ext_resource type="AudioStream" uid="uid://df5y3fvbk71a4" path="res://sound design/background.mp3" id="1_meyg4"]
+[ext_resource type="AudioStream" uid="uid://1t02blfapqdy" path="res://sound design/background_sec_version.mp3" id="2_ucrdw"]
+[ext_resource type="AudioStream" uid="uid://bqttu0a3q8f2v" path="res://sound design/crickets_sound.mp3" id="3_1g310"]
+
+[resource]
+shuffle = true
+stream_count = 3
+stream_0 = ExtResource("1_meyg4")
+stream_1 = ExtResource("2_ucrdw")
+stream_2 = ExtResource("3_1g310")

@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="aniscanner"
+run/main_scene="uid://cywsi5842vw8"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SendFish="*uid://boo372cm0qfi4"
 
 [display]
 

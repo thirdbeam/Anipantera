@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bij6man767yu3"]
+
+[ext_resource type="Script" uid="uid://bef548qgu8jnt" path="res://button.gd" id="1_mkjy8"]
+[ext_resource type="Texture2D" uid="uid://bxh1eemqq21xx" path="res://2891ccf3c9339225c036a2c192e86014.jpg" id="2_slm4s"]
+
+[node name="Control" type="Control" unique_id=958396982]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1768484298]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_slm4s")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1254070964]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1413682846]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer" unique_id=1402164824]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Рисовалочка"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer" unique_id=1397658464]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=755764746]
+layout_mode = 2
+size_flags_vertical = 10
+placeholder_text = "Введите Айпи"
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1878832504]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+text = "Подтвердить"
+script = ExtResource("1_mkjy8")
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Button" to="MarginContainer/PanelContainer/VBoxContainer/Button" method="_on_pressed"]

@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://cywsi5842vw8"]
+
+[ext_resource type="Script" uid="uid://b0ogv38kkmmj3" path="res://drawing_scene_2_attempt.gd" id="1_klmoi"]
+[ext_resource type="Script" uid="uid://c3mu4hu4mfxbb" path="res://fish_select.gd" id="2_8fjky"]
+[ext_resource type="Texture2D" uid="uid://bsq28v6hkor2g" path="res://Rybachyort3.png" id="3_8wv4t"]
+[ext_resource type="Texture2D" uid="uid://qes0joahlava" path="res://Ryiba3.jpg" id="3_kha2n"]
+[ext_resource type="Texture2D" uid="uid://dblg7w3y3js4s" path="res://Ryiba4.jpg" id="4_8wv4t"]
+[ext_resource type="Texture2D" uid="uid://uc0cowsnpfgc" path="res://Ryiba5.jpg" id="5_drrpd"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_klmoi"]
+
+[node name="Control" type="Control" unique_id=53699270]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=738688811]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=512645136 node_paths=PackedStringArray("color_picker")]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+script = ExtResource("1_klmoi")
+color_picker = NodePath("../ColorPrikoli/ColorPicker")
+
+[node name="Reference" type="TextureRect" parent="HBoxContainer/TextureRect" unique_id=566408759]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorPrikoli" type="VBoxContainer" parent="HBoxContainer" unique_id=1564355871]
+layout_mode = 2
+
+[node name="ColorPicker" type="ColorPicker" parent="HBoxContainer/ColorPrikoli" unique_id=2107164333]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+picker_shape = 1
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+sliders_visible = false
+hex_visible = false
+presets_visible = false
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer/ColorPrikoli" unique_id=1058629228]
+layout_mode = 2
+min_value = 2.0
+max_value = 20.0
+step = 0.5
+value = 10.0
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/ColorPrikoli" unique_id=1118966208 node_paths=PackedStringArray("reference")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+button_group = SubResource("ButtonGroup_klmoi")
+text = "Рыбка 1"
+script = ExtResource("2_8fjky")
+texture = ExtResource("3_8wv4t")
+reference = NodePath("../../TextureRect/Reference")
+
+[node name="CheckBox2" type="CheckBox" parent="HBoxContainer/ColorPrikoli" unique_id=1526350760 node_paths=PackedStringArray("reference")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+button_group = SubResource("ButtonGroup_klmoi")
+text = "Рыбка 2"
+script = ExtResource("2_8fjky")
+texture = ExtResource("3_kha2n")
+reference = NodePath("../../TextureRect/Reference")
+
+[node name="CheckBox3" type="CheckBox" parent="HBoxContainer/ColorPrikoli" unique_id=1252371762 node_paths=PackedStringArray("reference")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+button_group = SubResource("ButtonGroup_klmoi")
+text = "Рыбка 3"
+script = ExtResource("2_8fjky")
+texture = ExtResource("4_8wv4t")
+reference = NodePath("../../TextureRect/Reference")
+
+[node name="CheckBox4" type="CheckBox" parent="HBoxContainer/ColorPrikoli" unique_id=1041161244 node_paths=PackedStringArray("reference")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+button_group = SubResource("ButtonGroup_klmoi")
+text = "Рыбка 4"
+script = ExtResource("2_8fjky")
+texture = ExtResource("5_drrpd")
+reference = NodePath("../../TextureRect/Reference")
+
+[connection signal="value_changed" from="HBoxContainer/ColorPrikoli/HSlider" to="HBoxContainer/TextureRect" method="_on_h_slider_value_changed"]
